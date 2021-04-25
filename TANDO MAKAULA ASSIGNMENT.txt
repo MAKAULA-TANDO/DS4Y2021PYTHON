@@ -1,0 +1,111 @@
+NAME : TANDO
+SURNAME : MAKAULA
+STUDENT NUMBER: 217291163
+
+
+
+
+1. PYTHON PROGRAM
+
+def input_length():
+    lg = int(input("enter the length :"))
+    return lg
+
+
+def input_width():
+    wt = int(input("enter the width :"))
+    return wt
+
+
+def calculate_area(le, w):
+    a = le * w
+    return a
+
+
+def calculate_perimeter(le, w):
+    p = 2*(le * w)
+    return p
+
+
+if __name__ == '__main__':
+    length = input_length()
+    width = input_width()
+    perimeter = calculate_perimeter(length, width)
+    area = calculate_area(length, width)
+    print("area of a rectangle :", area)
+    print("perimeter of a rectangle :", perimeter)
+
+2. C# SHARP PROGRAM
+using System;
+
+namespace c_sharp_rectangle_program
+{
+    class Program
+    {
+        static double input_length(){
+        Console.WriteLine("enter the length :");
+        double l = Convert.ToDouble(Console.ReadLine());
+        return l;
+   }
+        static double input_width(){
+          Console.WriteLine("enter the width :");
+          double w = Convert.ToDouble(Console.ReadLine());
+          return w;
+   }
+        static double calculate_Perimeter(double l, double w)
+        {
+            double perimeter = 2 * (l * w);
+            return perimeter;
+        }
+        static double calculate_Area(double l, double w)
+        {
+            double area = l * w;
+            return area;
+        } 
+        static void Main(string[] args)
+        {
+         double length = input_length();
+         double width = input_width();
+         double area = calculate_Area(length,width);
+         double perimeter = calculate_Perimeter(length,width);
+      Console.WriteLine("The area of a rectangle :" + area);
+      Console.WriteLine("The perimeter of a rectangle :" + perimeter);
+      Console.ReadKey();
+        }
+    }
+}
+
+3. JAVA PROGRAM 
+import java.util.Scanner;
+
+public class Rectangle {
+    static double input_length(){
+        System.out.println("enter the length :");
+        Scanner console = new Scanner(System.in);
+        double l = console.nextDouble();
+        return l;
+     }
+ static double input_width(){
+        System.out.println("enter the width :");
+        Scanner console = new Scanner(System.in);
+        double w = console.nextDouble();
+        return w;
+     }  
+  static double calculate_Perimeter( double l,double w){
+        double perimeter = 2*(l*w);
+        return perimeter;  
+     } 
+   static double calculate_Area( double l,double w){
+       double area = l*w;
+       return area;  
+    } 
+  public static void main(String[] args){
+      double length = input_length();
+      double width = input_width();
+      double area = calculate_Area(length,width);
+      double perimeter = calculate_Perimeter(length,width);
+    System.out.println("The area of a rectangle :" + area);
+    System.out.println("The perimeter of a rectangle :" + perimeter);
+    
+   }  
+}
