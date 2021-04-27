@@ -1,0 +1,56 @@
+NAME:  TANDO
+SURNAME: MAKAULA
+STUDENT NUMBER: 217291163
+
+
+import java.util.Scanner;
+public class ObjRectangle {
+    
+    
+     double area;
+     double perimeter;
+     double length;
+     double width;
+     
+  public ObjRectangle(){
+        area = 0.0;
+        perimeter = 0.0;
+        length = 0.0;
+        width = 0.0;
+     }
+   public ObjRectangle(double length, double width){
+     this.length = length;
+     this.width = width;
+     }
+     
+   public void input_Attributes(){
+        Scanner console = new Scanner(System.in);
+        System.out.println("Enter the length :");
+           length = console.nextDouble();
+        System.out.println("Enter the width :");
+           width = console.nextDouble();
+     }
+  
+   public double calculate_Perimeter( double len,double wid){
+        perimeter = 2*(len*wid);
+        return perimeter;  
+     } 
+   public double calculate_Area( double len,double wid){
+       area = len*wid;
+       return area;  
+    }  
+   public void output_result(){
+    System.out.println("The area of a rectangle :" + calculate_Area(length, width) );
+    System.out.println("The perimeter of a rectangle :" + calculate_Perimeter(length, width));
+   }
+}
+
+public class TestObjRectangle {
+     public static void main(String[] args) {
+      ObjRectangle n1 = new ObjRectangle(); 
+      n1.input_Attributes();
+      n1.output_result();
+                
+     }
+ }
+
