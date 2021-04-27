@@ -1,0 +1,99 @@
+NAME: TANDO 
+SURNAME: MAKAULA
+STUDENT: 217291163
+
+
+
+
+1. PYTHON
+
+class RECTANGLE:
+    def __init__(self, perimeter, area, length, width):
+        self.perimeter = perimeter
+        self.area = area
+        self.length = length
+        self.width = width
+
+    def input_attributes(self):
+        self.length = float(input("Enter the length :"))
+        self.width = float(input("Enter the width :"))
+
+    def output_result(self):
+        print("area of a rectangle :",  calculate_area(self.length, self.width))
+        print("perimeter of a rectangle :", calculate_perimeter(self.length, self.width))
+
+
+def calculate_area(length, width):
+    return length * width
+
+
+def calculate_perimeter(length, width):
+    return 2 * (length * width)
+
+
+if __name__ == '__main__':
+    obj = RECTANGLE(0, 0, 0, 0)
+    obj.input_attributes()
+    obj.output_result()
+
+2. C# SHARP 
+
+ public class Rectangle
+    {
+        public Double Area;
+        public Double Perimeter;
+        public Double Length;
+        public Double Width;
+
+        public Rectangle()
+        {
+            Area = 0.0;
+            Perimeter = 0.0;
+            Length = 0.0;
+            Width = 0.0;
+        }
+        public Rectangle(Double Len, Double Wid)
+        {
+            Length = Len;
+            Width = Wid;
+        }
+
+        public void input_Attributes()
+        {
+            Console.WriteLine("Enter the length :");
+            Length = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the width :");
+            Width = Convert.ToDouble(Console.ReadLine());
+            
+        }
+        public Double calculate_Perimeter(Double len, Double wid)
+        {
+            Perimeter = 2 * (len * wid);
+            return Perimeter;
+        }
+        public Double calculate_Area(Double len, Double wid)
+        {
+            Area = len * wid;
+            return Area;
+        }
+
+
+        public void output_results()
+        {
+            Console.WriteLine("The area of a rectangle :" + calculate_Area(Length, Width));
+            Console.WriteLine("The perimeter of a rectangle :" + calculate_Perimeter(Length, Width));
+            Console.ReadKey();
+        }
+
+
+  class Program
+  {
+            static void Main(string[] args)
+            {
+                Rectangle Obj = new Rectangle();
+                Obj.input_Attributes();
+                Obj.output_results();
+            }
+        }
+    }
+}
